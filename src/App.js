@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <h1>MovieBox </h1>
       <Form />
-      <Search />
     </div>
   );
 }
