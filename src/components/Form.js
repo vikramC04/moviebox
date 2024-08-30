@@ -28,7 +28,7 @@ class Form extends Component {
         })
         event.preventDefault()
         console.log(this.state.query)
-        // <Search query={this.state.query} /> 
+        
     }
     
   render() {
@@ -41,7 +41,8 @@ class Form extends Component {
                 </div>
             </form>
             <div>
-            
+                <h1>hello</h1>
+                {<Search query={this.state.search}/>}
             </div>
         </div>
         

@@ -8,8 +8,6 @@ const APIKEY = `da0f0262c12dc5195f32ff6b0ae01717`
 
 function Search({query}) {
     let search = URL.concat("?query=", query.replaceAll(" ", "+")).concat("&api_key=", APIKEY)
-
-    console.log(search)
     const [movie, setMovie] = useState(0)
     useEffect(() => {
         const fetchMovie = async () => {
@@ -21,7 +19,7 @@ function Search({query}) {
             })
         }
         fetchMovie();
-    }, [])
+    }, [search])
 
     const func2 = (parse) => {
       let arr = []
@@ -42,7 +40,6 @@ function Search({query}) {
 
   return (
     <div>
-      <h1>Bet</h1>
       {movie}
     </div>
   )
