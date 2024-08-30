@@ -5,10 +5,13 @@ import Search from './components/Search';
 
 function App() {
   return (
-    <div className="App">
-      <h1>MovieBox </h1>
-      <Form />
-    </div>
+    <body>
+      <div>
+        <h1>MovieBox </h1>
+        <Form />
+      </div>
+    </body>
+    
   );
 }
 

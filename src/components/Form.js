@@ -27,7 +27,6 @@ class Form extends Component {
             search : this.state.query
         })
         event.preventDefault()
-        console.log(this.state.query)
         
     }
     
@@ -40,10 +39,12 @@ class Form extends Component {
                     <button type="submit" >Submit</button>
                 </div>
             </form>
+            
             <div>
-                <h1>hello</h1>
-                {<Search query={this.state.search}/>}
+             {<Search query={this.state.search}/>}
             </div>
+                
+            
         </div>
         
       
