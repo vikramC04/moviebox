@@ -13,7 +13,6 @@ function Search({query}) {
         const fetchMovie = async () => {
             const result = await fetch(search)
             result.json().then(json => {
-              console.log(json.results)
               const movieList = ParseInfo(json.results).map(mov => (<Movie key={mov.id} movie={mov}></Movie>))
               setMovie(movieList)
             })
@@ -34,7 +33,6 @@ function Search({query}) {
         }
         arr.push(temp) 
       }
-      console.log(arr)
       return arr;
     };
 
