@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { useState, useEffect} from 'react';
 import Search from './Search';
 
 const URL = `https://api.themoviedb.org/3/search/movie`
@@ -32,20 +31,26 @@ class Form extends Component {
     
   render() {
     return (
-        <div>
-            <form onSubmit={this.handleSubmit}>
-                <div>
-                    <input type="text" value={this.state.query} onChange={this.handleQuery}></input>
-                    <button type="submit" >Submit</button>
-                </div>
-            </form>
-            
             <div>
-             {<Search query={this.state.search}/>}
-            </div>
+                <div className="form">
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" 
+                        className="search-box" 
+                        value={this.state.query} 
+                        onChange={this.handleQuery} 
+                        placeholder="Enter movie title..."></input>
+                        <button type="submit" className="enter-button" >Submit</button>  
+                    </form>
+                </div>
+                <div>
+                <Search query={this.state.search}/>
+                </div>
                 
+            </div>
             
-        </div>
+            
+                
+       
         
       
     )

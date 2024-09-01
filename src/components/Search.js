@@ -39,7 +39,7 @@ function Search({query}) {
     };
 
   return (
-    <div>
+    <div className="wrapper">
       {movie}
     </div>
   )

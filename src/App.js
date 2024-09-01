@@ -6,9 +6,15 @@ import Search from './components/Search';
 function App() {
   return (
     <body>
-      <div>
-        <h1>MovieBox </h1>
-        <Form />
+      <div id="root">
+        <div className="App">
+          <div className="content">
+            <div className="header">
+                <h1>MovieBox </h1>
+            </div>
+            <Form />
+          </div>     
+        </div>
       </div>
     </body>
     
