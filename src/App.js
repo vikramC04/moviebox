@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import Form from './components/Form'
-import Search from './components/Search';
+
 
 function App() {
   return (
     
-      
+
       <body>
       <div id="root">
         <div className="App">
@@ -19,7 +18,6 @@ function App() {
         </div>
       </div>
     </body>
-    
     
     
   );
