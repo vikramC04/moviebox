@@ -5,7 +5,9 @@ import Search from './components/Search';
 
 function App() {
   return (
-    <body>
+    
+      
+      <body>
       <div id="root">
         <div className="App">
           <div className="content">
@@ -17,6 +19,8 @@ function App() {
         </div>
       </div>
     </body>
+    
+    
     
   );
 }
