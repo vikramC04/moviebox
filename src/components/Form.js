@@ -3,6 +3,7 @@ import Search from './Search';
 
 const URL = `https://api.themoviedb.org/3/search/movie`
 const APIKEY = `da0f0262c12dc5195f32ff6b0ae01717`
+const STARTERS = ['car', 'cog', 'avenge', 'drag', 's', 'vamp', 'hunter', 'sha', 'transformers']
 
 class Form extends Component {
     constructor(props) {
@@ -41,6 +42,9 @@ class Form extends Component {
                         placeholder="Enter movie title..."></input>
                         <button type="submit" className="enter-button" >Submit</button>  
                     </form>
+                </div>
+                <div>
+                    Browse as a Guest, Login or Sign Up to Save and Rate Movies!
                 </div>
                 <div>
                 <Search query={this.state.search}/>
