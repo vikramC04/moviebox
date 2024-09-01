@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import Search from './Search';
 
-const URL = `https://api.themoviedb.org/3/search/movie`
-const APIKEY = `da0f0262c12dc5195f32ff6b0ae01717`
-const STARTERS = ['car', 'cog', 'avenge', 'drag', 's', 'vamp', 'hunter', 'sha', 'transformers']
+// const STARTERS = ['car', 'cog', 'avenge', 'drag', 's', 'vamp', 'hunter', 'sha', 'transformers']
 
 class Form extends Component {
     constructor(props) {
