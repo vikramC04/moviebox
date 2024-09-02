@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Search from './Search';
 
- const STARTERS = ['car', 'cog', 'avenge', 'drag', 's', 'vamp', 'hunter', 'sha', 'transformers']
+const STARTERS = ['car', 'cog', 'avenge', 'drag', 's', 'vamp', 'hunter', 'sha', 'transformers']
 
 class Form extends Component {
     constructor(props) {
@@ -40,13 +40,12 @@ class Form extends Component {
                         <button type="submit" className="enter-button" >Submit</button>  
                     </form>
                 </div>
-                <div>
+                {/* <div>
                     Browse as a Guest, Login or Sign Up to Save and Rate Movies!
-                </div>
+                </div> */}
                 <div>
                 <Search query={this.state.search}/>
                 </div>
-                
             </div>
 
     )
