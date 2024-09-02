@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Search from './Search';
 
-// const STARTERS = ['car', 'cog', 'avenge', 'drag', 's', 'vamp', 'hunter', 'sha', 'transformers']
+ const STARTERS = ['car', 'cog', 'avenge', 'drag', 's', 'vamp', 'hunter', 'sha', 'transformers']
 
 class Form extends Component {
     constructor(props) {
@@ -9,10 +9,9 @@ class Form extends Component {
     
       this.state = {
          query : '',
-         search : ''
+         search : STARTERS[Math.floor(Math.random() * STARTERS.length)]
       }
     }
-
 
     handleQuery = (event) => {
         this.setState({
@@ -49,12 +48,7 @@ class Form extends Component {
                 </div>
                 
             </div>
-            
-            
-                
-       
-        
-      
+
     )
   }
 }
