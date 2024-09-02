@@ -29,25 +29,24 @@ class Form extends Component {
     
   render() {
     return (
-            <div>
-                <div className="form">
-                    <form onSubmit={this.handleSubmit}>
-                        <input type="text" 
-                        className="search-box" 
-                        value={this.state.query} 
-                        onChange={this.handleQuery} 
-                        placeholder="Enter movie title..."></input>
-                        <button type="submit" className="enter-button" >Submit</button>  
-                    </form>
-                </div>
-                {/* <div>
-                    Browse as a Guest, Login or Sign Up to Save and Rate Movies!
-                </div> */}
-                <div>
-                <Search query={this.state.search}/>
-                </div>
+        <div>
+            <div className="form">
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" 
+                    className="search-box" 
+                    value={this.state.query} 
+                    onChange={this.handleQuery} 
+                    placeholder="Enter movie title..."></input>
+                    <button type="submit" className="enter-button" >Submit</button>  
+                </form>
             </div>
-
+            {/* <div>
+                Browse as a Guest, Login or Sign Up to Save and Rate Movies!
+            </div> */}
+            <div>
+            <Search query={this.state.search}/>
+            </div>
+        </div>
     )
   }
 }

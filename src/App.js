@@ -11,7 +11,7 @@ function App() {
         <div className="App">
           <div className="content">
             <div className="header">
-                <h1>MovieBox </h1>
+                <h1>MovieCurtain</h1>
             </div>
             <Form />
           </div>     
