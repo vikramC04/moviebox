@@ -53,6 +53,7 @@ button {
   font-weight: 700;
   letter-spacing: -.01em;
   line-height: 1;
+  margin-right: 10px;
   padding: 12px;
   position: relative;
   text-align: left;
@@ -60,17 +61,35 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  transition: all 0.4s
-
+  transition: all 0.4s;
 }
 
 .enter-button:hover {
   transform: scale(1.08)
 }
 
+.content-header {
+  top: 0;
+  width: 100%;
+  z-index: 2020;
+}
 
-header {
-  padding: 30px
+.top-header {
+  height: 56px;
+  padding: 0 16px;
+  display: flexbox;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+
+.end-header {
+  
+  padding: 10px;
+  min-width: 225px;
+  align-items: center;
 }
 
 .wrapper {
@@ -109,5 +128,29 @@ header {
   width: 180px;
   align-content: center;
   justify-content: center;
+}
+
+.left-header {
+  height: 56px;
+  padding: 0 16px;
+  display: flexbox;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-render {
+  height: 56px;
+  padding: 0 16px;
+  display: flexbox;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Logo {
+  line-height: 1;
+  margin-right: 10px;
+  padding: 12px;
 }
 

@@ -1,25 +1,21 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Form from './components/Form'
-
+import Header from './components/Header';
+import Login from './components/auth/login';
+import Signup from './components/auth/signup';
+import Home from './Home';
 
 function App() {
   return (
-    
-
-      <body>
-      <div id="root">
-        <div className="App">
-          <div className="content">
-            <div className="header">
-                <h1>MovieCurtain</h1>
-            </div>
-            <Form />
-          </div>     
-        </div>
-      </div>
-    </body>
-    
-    
+    <div>
+      <Routes>
+        <Route index element = {<Home />} />
+        <Route path="/home" element= {<Home />} />
+        <Route path="/login" element ={<Login />} />
+        <Route path="/signup" element ={<Signup />} />
+      </Routes>
+    </div>
   );
 }
 
