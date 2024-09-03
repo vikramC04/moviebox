@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Search from './Search';
 
-const STARTERS = ['car', 'cog', 'avenge', 'drag', 's', 'vamp', 'hunter', 'sha', 'transformers']
+const STARTERS = ['car', 'cog', 'avenge', 'drag', 'vamp', 'hunter', 'sha', 'transformers', 'dark knight']
 
 class Form extends Component {
     constructor(props) {
