@@ -31,7 +31,7 @@ function Info() {
                 }
                 fetchMovie();
             } 
-        }, [id])
+        }, [id, isLoaded])
   return (
     <div className="root">
         <Header />
