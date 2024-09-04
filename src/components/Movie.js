@@ -1,21 +1,57 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const POSTER_IMAGE = "https://image.tmdb.org/t/p/w185"
 
-function Movie({movie}) {
-  const poster = POSTER_IMAGE.concat(movie.poster)
-  return (
-    <div>
-      <div className="card">
-      <div className="poster">
-          <img src={poster} alt="error"></img>
+function Movie({movie, display}) {
+  
+  if(!display) {
+    const poster = POSTER_IMAGE.concat(movie.poster)
+    return (
+      <div>
+          <div className="card">
+            <Link to={"/info?".concat(movie.id)}>
+            <div className="poster">
+              <img src={poster} alt="error"></img>
+            </div>
+            </Link>
+        </div>
+          <div className="text-box">
+            <h3>{movie.title}</h3>
+          </div>
       </div>
-    </div>
-      <div className="text-box">
-        <h3>{movie.title}</h3>
+    )
+  } else {
+    const poster = POSTER_IMAGE.concat(movie.poster_path)
+    return (
+      <div>
+        <h1>{movie.title}</h1>
+          <div className="card">
+            <div className="poster">
+              <img src={poster} alt="error"></img>
+            </div>
+        </div>
+          <div className="side-info">
+            <div>
+              Rating: {movie.vote_average}
+            </div>
+            <div>
+              User Reviews: {movie.vote_count}
+            </div>
+            
+          </div>
+        <div>
+          <h1>Synopsis:</h1>
+          <div className="desc-mov">
+            {movie.overview}
+          </div>
+        </div>
+          
       </div>
-    </div>
-  )
+    )
+    
+  }
+  
 }
 
 export default Movie
