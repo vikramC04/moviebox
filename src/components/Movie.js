@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useAuth } from './contexts/authContexts';
 
 const POSTER_IMAGE = "https://image.tmdb.org/t/p/w185"
 
+
 function Movie({movie, display}) {
-  
+  const { userLoggedIn } = useAuth()
   if(!display) {
     const poster = POSTER_IMAGE.concat(movie.poster)
     return (
@@ -31,6 +33,9 @@ function Movie({movie, display}) {
               <img src={poster} alt="error"></img>
             </div>
         </div>
+        
+        
+        
           <div className="side-info">
             <div>
               Rating: {movie.vote_average}
@@ -38,6 +43,8 @@ function Movie({movie, display}) {
             <div>
               User Reviews: {movie.vote_count}
             </div>
+            {userLoggedIn ? <button className="enter-button">Add To WatchList</button> : ''}
+            
             
           </div>
         <div>

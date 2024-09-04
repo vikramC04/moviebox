@@ -17,8 +17,14 @@ function Header() {
             {
                 userLoggedIn 
                 ?
+                <>  
+                    <Link to="/watchlist">
+                    <button className="enter-button"> View Watchlist</button>
+                    </Link>
+                    
+                    <button className="enter-button" onClick={() => { auth.signOut().then(() => { navigate('/home') }) }}> Sign Out</button> 
+                </>
                 
-                <button className="enter-button" onClick={() => { auth.signOut().then(() => { navigate('/home') }) }}> Sign Out</button> 
                 
                 :
                 <>
