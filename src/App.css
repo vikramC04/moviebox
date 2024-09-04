@@ -162,6 +162,7 @@ button {
   align-items: center;
   justify-content: center;
   height: 80vh;
+  
 }
 .wrapper-form{
   width: 380px;
@@ -181,7 +182,8 @@ button {
   background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 .signup-form{
-  padding: 10px 30px 50px 30px;
+  padding: 30px 30px 50px 10px;
+  
   
 }
  .field{
@@ -189,6 +191,7 @@ button {
   width: 100%;
   margin-top: 20px;
   position: relative;
+  
 }
  input{
   height: 100%;
@@ -204,9 +207,10 @@ button {
 form .field input:valid{
   border-color: #4158d0;
 }
+
 label{
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 20px;
   color: #999999;
   font-weight: 400;
@@ -223,7 +227,6 @@ label{
   background: #fff;
   transform: translateY(-50%);
 }
-
 
 .signup-form .content input{
   width: 15px;
@@ -248,24 +251,12 @@ label{
   cursor: pointer;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
   transition: all 0.3s ease;
+  width: 107%
 }
 .signup-form .field input[type="submit"]:active{
   transform: scale(0.95);
 }
-.signup-form .signup-link{
-  color: #262626;
-  margin-top: 20px;
-  text-align: center;
-}
-.signup-form .pass-link a,
-.signup-form .signup-link a{
-  color: #4158d0;
-  text-decoration: none;
-}
-.signup-form .pass-link a:hover,
-.signup-form .signup-link a:hover{
-  text-decoration: underline;
-}
+
 
 .error {
   color: #cc0000;

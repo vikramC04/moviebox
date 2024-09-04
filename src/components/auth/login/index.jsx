@@ -27,7 +27,7 @@ const Login = () => {
            <div className="fcontainer">
             <div className="wrapper-form">
                     <div className="title">
-                    Login Form
+                    Login
                     </div>
                     <form className="signup-form" onSubmit={loginOnSubmit}>
                     <div className="field">
