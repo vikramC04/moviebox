@@ -7,9 +7,9 @@ function Home() {
 
     <body>
       <div id="root">
+        <Header />
         <div className="App">
           <div className="content">
-            <Header />
             <div className="header">
                 <h1>MovieCurtain</h1>
             </div>
