@@ -38,11 +38,7 @@ function Info() {
         <div className="info-main">
             <div className="wrapper-info">
                 {movie}
-            </div>
-            <div>
-                
-            </div>
-            
+            </div> 
         </div>
         
         

@@ -4,6 +4,7 @@ import Login from './components/auth/login';
 import Signup from './components/auth/signup';
 import Home from './Home';
 import Info from './components/Info';
+import Watchlist from './components/Watchlist';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login?" element ={<Login />} />
         <Route path="/signup" element ={<Signup />} />
         <Route path="/info" element ={<Info />} />
+        <Route path="/watchlist" element ={<Watchlist />} />
       </Routes>
     </div>
   );
