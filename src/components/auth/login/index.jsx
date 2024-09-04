@@ -24,14 +24,29 @@ const Login = () => {
         <div>
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
            <Header />
-           <h1>Log In</h1>
-           <form onSubmit={loginOnSubmit}>
-                <input type="email" placeholder='Enter your email' value={email} onChange ={(e) => setEmail(e.target.value)}></input>
-                <input type="password" placeholder='Enter your password' value={password} onChange ={(e) => setPassword(e.target.value)}></input>
-                <button type="Submit"> Submit</button>
-           </form>
-           <h2>{errorMessage}</h2>
-            
+           <div className="fcontainer">
+            <div className="wrapper-form">
+                    <div className="title">
+                    Login Form
+                    </div>
+                    <form className="signup-form" onSubmit={loginOnSubmit}>
+                    <div className="field">
+                        <input type="email" placeholder='Enter your email' value={email} onChange ={(e) => setEmail(e.target.value)}></input>
+                        <label>Email Address</label>
+                    </div>
+                    <div className="field">
+                        <input type="password" placeholder='Enter your password' value={password} onChange ={(e) => setPassword(e.target.value)}></input>
+                        <label>Password</label>
+                    </div>
+                    <div className="field">
+                        <input type="Submit" className="submit-type"></input>
+                    </div>
+                    <div className="error">
+                        {errorMessage}
+                    </div>
+                    </form>
+                </div>
+           </div>
         </div>
     )
 }
