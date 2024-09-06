@@ -12,7 +12,7 @@ function Search({query}) {
         const fetchMovie = async () => {
             const result = await fetch(search)
             result.json().then(json => {
-              const movieList = ParseInfo(json.results).map(mov => (<Movie key={mov.id} movie={mov} display={false}></Movie>))
+              const movieList = ParseInfo(json.results).map(mov => (<Movie key={mov.id} id={mov.id} title={mov.title} poster={mov.poster}></Movie>))
               setMovie(movieList)
             })
         }

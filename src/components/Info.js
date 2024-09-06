@@ -1,10 +1,10 @@
 import {React, useState, useEffect} from 'react'
 import Header from './Header'
-import Movie from './Movie'
-
+import MovieInfo from './MovieInfo'
 
 const URL = `https://api.themoviedb.org/3/movie/`
 const APIKEY = `da0f0262c12dc5195f32ff6b0ae01717`
+
 function Info() {
     const [id, setID] = useState('')
     const [movie, setMovie] = useState(null)
@@ -26,7 +26,7 @@ function Info() {
                     const result = await fetch(search)
                     result.json().then(json => {
                         console.log(json)
-                        setMovie(<Movie key={json.id} movie={json} display={true}></Movie>)
+                        setMovie(<MovieInfo key={json.id} movie={json}></MovieInfo>)
                     })
                 }
                 fetchMovie();
