@@ -1,4 +1,5 @@
-require("dotenv").config();
+require('dotenv').config({path:__dirname+'/./../../.env'})
+console.log(__dirname+'/./../.env')
 
 const express = require("express");
 const app = express();
@@ -7,6 +8,7 @@ const mongoose = require("mongoose");
 var cors = require('cors')
 app.use(cors())
 
+console.log(process.env.REACT_APP_MONGODB_URL)
 mongoose.connect(
     'mongodb+srv://vikramchandar04:B3h49GBDjkBlsSUP@cluster0.5b4py.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test', 
     {

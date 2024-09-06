@@ -1,7 +1,5 @@
 import React from 'react'
 import { useAuth } from './contexts/authContexts';
-import { useState, useEffect} from 'react';
-import axios from 'axios'
 
 const POSTER_IMAGE = "https://image.tmdb.org/t/p/w185"
 
@@ -9,7 +7,7 @@ function MovieInfo({movie}) {
     const { userLoggedIn } = useAuth()
     const { currentUser } = useAuth()
     const image = POSTER_IMAGE.concat(movie.poster_path)
-    
+    const url = process.env.REACT_APP_API_URL
     
     const createMovie = async () => {
         const userEmail = currentUser.email
@@ -22,7 +20,7 @@ function MovieInfo({movie}) {
         }
         console.log(mov)
 
-        await fetch(`http://localhost:3000/users/${userEmail}`, {
+        await fetch(`${url}/users/${userEmail}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -36,14 +34,6 @@ function MovieInfo({movie}) {
           }).then(res => {
             console.log(res.json())
         })
-
-        // await fetch(`http://localhost:3000/users/${userEmail}`, {
-        //     method: 'POST',
-        //     headers: {"Content-Type": "application/json"},
-        //     body: mov
-        // }).then(res => {
-        //     console.log(res.json())
-        // })
 
 
         console.log('Added Movie')
