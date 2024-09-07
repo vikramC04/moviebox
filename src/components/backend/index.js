@@ -1,5 +1,4 @@
 require('dotenv').config()
-console.log(__dirname+'/./../.env')
 
 const express = require("express");
 const app = express();
@@ -8,9 +7,9 @@ const mongoose = require("mongoose");
 var cors = require('cors')
 app.use(cors())
 
-console.log(process.env.REACT_APP_MONGODB_URL)
+console.log(process.env.MONGODB_URI)
 mongoose.connect(
-    process.env.MONGODB_URL, 
+    process.env.MONGODB_URI, 
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
