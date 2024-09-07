@@ -38,9 +38,10 @@ To get started with MovieCurtain locally, follow these steps:
     cd client
     npm install
 
-3. **Create a .env file**:
+3. **Create a .env file and update environment variables**:
    ```bash
    REACT_APP_API_URL=
    REACT_APP_API_KEY=
-   
 
+## Live Demo
+Visit https://moviecurtain.netlify.app/
