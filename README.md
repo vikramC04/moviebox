@@ -32,33 +32,15 @@ To get started with MovieCurtain locally, follow these steps:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/moviecurtain.git
-Install dependencies: Navigate into the project directory and install the required dependencies for both the backend and frontend:
 
-bash
-Copy code
+2. **Install dependencies**: Navigate into the project directory and install the required dependencies for both the backend and frontend:
+
+```bash
 cd moviecurtain
 npm install
-cd client
-npm install
-Set up Firebase:
 
-Create a Firebase project in the Firebase Console.
-Set up email/password authentication.
-Copy the Firebase configuration into your project.
-Set up MongoDB:
+3. **Create .env File and Fill In Environment Variables**: 
 
-Make sure you have MongoDB installed and running.
-Create a .env file in the root directory and add your MongoDB URI:
-bash
-Copy code
-MONGO_URI=mongodb://localhost:27017/moviecurtain
-Run the application: Start both the backend and frontend servers:
-
-bash
-Copy code
-# Start backend server
-npm run dev
-
-# Start frontend server
-cd client
-npm start
+```bash
+REACT_APP_API_URL=
+REACT_APP_API_KEY=
