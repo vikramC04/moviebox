@@ -150,6 +150,11 @@ body {
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   display: inline-block;
   vertical-align: middle;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.card:hover {
+  border-color: #000000;
 }
 
 .poster {
@@ -294,6 +299,7 @@ label{
 .signup-form .field input[type="submit"]:active{
   transform: scale(0.95);
 }
+
 
 .error {
   color: #cc0000;
