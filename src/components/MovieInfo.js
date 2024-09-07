@@ -20,7 +20,6 @@ function MovieInfo({movie}) {
         console.log(mov)
 
         await fetch(`https://moviebox-an28.onrender.com/users/${userEmail}`, {
-            mode: 'no-cors',
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

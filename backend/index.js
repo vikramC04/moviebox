@@ -4,8 +4,9 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 
-var cors = require('cors')
-app.use(cors())
+var cors = require('cors');
+app.use(express.json());
+app.use(cors());
 
 console.log(process.env.MONGODB_URI)
 mongoose.connect(
@@ -19,7 +20,7 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
 
-app.use(express.json());
+
 
 const usersRouter = require('./routes/users')
 app.use('/users', usersRouter)
