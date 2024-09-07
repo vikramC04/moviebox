@@ -14,7 +14,7 @@ function Watchlist() {
     useEffect(() => {
         const mov =  async () => {
             let results = await fetch(`${process.env.REACT_APP_API_URL}/users/${userEmail}`).then(resp => resp.json());
-            console.log(`http://localhost:3000/users/${userEmail}`);
+            console.log(`https://moviebox-an28.onrender.com/users/${userEmail}`);
             const movieList = results.map(mov => (<Movie key={mov.movid} id={mov.movid} title={mov.title} poster={mov.poster}></Movie>))
             setMovies(movieList);
             console.log("Got it")
