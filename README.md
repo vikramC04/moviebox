@@ -45,3 +45,6 @@ To get started with MovieCurtain locally, follow these steps:
 
 ## Live Demo
 Visit https://moviecurtain.netlify.app/
+
+## Backend
+The backend code is a seperate repository. Visit https://github.com/vikramC04/moviecurtain-backend to see the backend code that uses express.js and MongoDB
