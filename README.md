@@ -34,13 +34,11 @@ To get started with MovieCurtain locally, follow these steps:
    git clone https://github.com/yourusername/moviecurtain.git
 
 2. **Install dependencies**: Navigate into the project directory and install the required dependencies for both the backend and frontend:
-
-```bash
-cd moviecurtain
-npm install
+  ```bash
+  cd moviecurtain
+  npm install
 
 3. **Create .env File and Fill In Environment Variables**: 
-
-```bash
-REACT_APP_API_URL=
-REACT_APP_API_KEY=
+  ```bash
+  REACT_APP_API_URL=
+  REACT_APP_API_KEY=
