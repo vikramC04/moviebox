@@ -28,8 +28,8 @@
 To get started with MovieCurtain locally, follow these steps:
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/moviecurtain.git
+ ```bash
+ git clone https://github.com/yourusername/moviecurtain.git
 
 2. **Install Dependencies**:
   ```bash
