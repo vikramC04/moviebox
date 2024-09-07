@@ -13,15 +13,15 @@
 ## Tech Stack
 
 - **Frontend**:
-  - React: For building an interactive and dynamic user interface.
+  - **React**: For building an interactive and dynamic user interface.
   - **HTML/CSS**: For structuring and styling the web pages.
 
 - **Backend**:
-  - Node.js & Express.js: Used to handle API requests, manage server-side logic, and handle routes.
-  - MongoDB: A NoSQL database to store user watchlist data.
+  - **Node.js** & **Express.js**: Used to handle API requests, manage server-side logic, and handle routes.
+  - **MongoDB**: A NoSQL database to store user watchlist data.
 
 - **Authentication**:
-  - Firebase: Provides secure user login and registration using email and password.
+  - **Firebase**: Provides secure user login and registration using email and password.
 
 ## Installation
 
