@@ -7,7 +7,6 @@ function MovieInfo({movie}) {
     const { userLoggedIn } = useAuth()
     const { currentUser } = useAuth()
     const image = POSTER_IMAGE.concat(movie.poster_path)
-    const url = process.env.REACT_APP_API_URL
     
     const createMovie = async () => {
         const userEmail = currentUser.email
