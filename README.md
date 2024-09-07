@@ -1,6 +1,4 @@
-# MovieCurtain 🎬
-
-MovieCurtain is a web application that allows users to search for movies and read detailed information using the [TMDB API](https://www.themoviedb.org/documentation/api). Users can create accounts and log in using **Firebase Authentication**. The application is built with **React**, **HTML**, **CSS**, and **JavaScript** on the frontend, and **Node.js** on the backend.
+# MovieCurtain
 
 **MovieCurtain** is a web application that allows users to search for movies and save them to their personal watchlist. The project is built using modern web development tools and integrates various technologies to provide a smooth user experience.
 
@@ -14,16 +12,16 @@ MovieCurtain is a web application that allows users to search for movies and rea
 
 ## Tech Stack
 
-- **Frontend**: 
-  - React: For building an interactive and dynamic user interface.
-  - HTML/CSS: For structuring and styling the web pages.
+- **Frontend**:
+  - [React](https://reactjs.org/): For building an interactive and dynamic user interface.
+  - **HTML/CSS**: For structuring and styling the web pages.
 
 - **Backend**:
-  - Node.js & Express.js: Used to handle API requests and responses, manage server-side logic, and route handling.
-  - MongoDB: A NoSQL database to store user watchlist data.
+  - [Node.js](https://nodejs.org/) & [Express.js](https://expressjs.com/): Used to handle API requests, manage server-side logic, and handle routes.
+  - [MongoDB](https://www.mongodb.com/): A NoSQL database to store user watchlist data.
 
 - **Authentication**:
-  - Firebase: Provides secure user login and registration using email and password.
+  - [Firebase](https://firebase.google.com/): Provides secure user login and registration using email and password.
 
 ## Installation
 
@@ -33,12 +31,9 @@ To get started with MovieCurtain locally, follow these steps:
    ```bash
    git clone https://github.com/yourusername/moviecurtain.git
 
-2. **Install dependencies**: Navigate into the project directory and install the required dependencies for both the backend and frontend:
+2. **Install Dependencies**:
   ```bash
   cd moviecurtain
   npm install
-
-3. **Create .env File and Fill In Environment Variables**: 
-  ```bash
-  REACT_APP_API_URL=
-  REACT_APP_API_KEY=
+  cd client
+  npm install
