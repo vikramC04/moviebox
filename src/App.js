@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Login from './components/auth/login';
-import Signup from './components/auth/signup';
-import Home from './Home';
-import Info from './components/Info';
-import Watchlist from './components/Watchlist';
+import Login from './Pages/login';
+import Signup from './Pages/signup';
+import Home from './Pages/Home';
+import Info from './Pages/Info';
+import Watchlist from './Pages/Watchlist';
 
 function App() {
   return (
