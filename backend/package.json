@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npm install",
-    "devStart": "nodemon index.js"
+    "devStart": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
