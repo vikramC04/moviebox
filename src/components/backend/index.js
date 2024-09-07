@@ -1,4 +1,4 @@
-require('dotenv').config({path:__dirname+'/./../../.env'})
+require('dotenv').config()
 console.log(__dirname+'/./../.env')
 
 const express = require("express");
@@ -10,7 +10,7 @@ app.use(cors())
 
 console.log(process.env.REACT_APP_MONGODB_URL)
 mongoose.connect(
-    'mongodb+srv://vikramchandar04:B3h49GBDjkBlsSUP@cluster0.5b4py.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test', 
+    process.env.MONGODB_URL, 
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
