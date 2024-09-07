@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm install && node index.js",
+    "build": "npm install",
     "devStart": "nodemon index.js"
   },
   "keywords": [],
