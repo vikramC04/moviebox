@@ -44,8 +44,6 @@ To get started with MovieCurtain locally, follow these steps:
    REACT_APP_API_KEY=
 
 ## Live Demo
-Notice: Backend Database is hosted on render.com which has a first request response time up to 50 seconds after thirty minutes without a request. When visiting the watchlist, or adding a movie to the watchlist, beware that there can be delays. Refresh, sign in and sign out and try again after ~30 seconds and it will work with instant API requests if there are delays. 
-
 Visit https://moviecurtain.netlify.app/
 
 ## Backend
