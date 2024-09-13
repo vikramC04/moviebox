@@ -10,14 +10,6 @@ function MovieInfo({movie}) {
     
     const createMovie = async () => {
       const userEmail = currentUser.email
-      const mov = {
-          email: userEmail,
-          movid: movie.id.toString(),
-          title: movie.title,
-          poster: movie.poster_path
-      }
-      console.log(mov)
-
       await fetch(`${process.env.REACT_APP_API_URL}/users/${userEmail}`, {
           method: 'POST',
           headers: {
