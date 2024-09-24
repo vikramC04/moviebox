@@ -9,7 +9,7 @@ function Movie({id, poster, title}) {
   
     const image = POSTER_IMAGE.concat(poster)
     return (
-      <div className="card-holder">
+      <div>
           <div className="card">
             <Link to={"/info?".concat(id)}>
             <div className="poster">
