@@ -91,7 +91,6 @@ body {
 }
 
 .end-header {
-  
   padding: 10px;
   min-width: 225px;
 }
@@ -101,8 +100,8 @@ body {
   width: 100%;
   height: 100%;
   padding: 20px;
-  align-content: left;
-  justify-content: left;
+  align-content: flex-start;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
   text-align: center;
@@ -117,7 +116,6 @@ body {
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  overflow: visible
 }
 
 .desc-mov {
@@ -162,7 +160,7 @@ body {
   position: flex;
   width: 100%;
   height: 100%;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .text-box {
