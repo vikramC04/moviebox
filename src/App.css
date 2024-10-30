@@ -289,14 +289,15 @@ label{
 .submit-type{
   color: #fff;
   border: none;
-  padding-left: 0;
   margin-top: -10px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 300;
   cursor: pointer;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
   transition: all 0.3s ease;
-  width: 107%
+  padding-right: 22px;
+  width: 110%
+  
 }
 .signup-form .field input[type="submit"]:active{
   transform: scale(0.95);
