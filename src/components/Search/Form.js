@@ -1,41 +1,54 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useState, useEffect} from 'react';
 import Search from './Search';
 
 const STARTERS = ['car', 'cog', 'avenge', 'drag', 'vamp', 'hunter', 'sha', 'transformers', 'dark knight']
 
-class Form extends Component {
-    constructor(props) {
-      super(props)
-    
-      this.state = {
-         query : '',
-         search : STARTERS[Math.floor(Math.random() * STARTERS.length)]
-      }
-    }
+function Form()  {
+    const [query, setQuery] = useState('');
+    const [search, setSearch] = useState(STARTERS[Math.floor(Math.random() * STARTERS.length)]);
 
-    handleQuery = (event) => {
-        this.setState({
-            query : event.target.value
-        })
-    }
-
-    handleSubmit = (event) => {
-        this.setState({
-            search : this.state.query
-        })
-        event.preventDefault()
+    useEffect(() => {
+        const sessionActive = sessionStorage.getItem('SESSION_ACTIVE');
+        const data = JSON.parse(window.localStorage.getItem('SEARCH_RES'));
         
-    }
-    
-  render() {
+        if (data !== null && sessionActive) {
+            setSearch(data);
+            setQuery(data);
+        }
+    }, []);
+
+    useEffect(() => {
+        window.localStorage.setItem('SEARCH_RES', JSON.stringify(search));
+    }, [search]);
+
+    useEffect(() => {
+        sessionStorage.setItem('SESSION_ACTIVE', 'true');
+
+        const handleBeforeUnload = () => {
+            if(!sessionStorage.getItem('SESSION_ACTIVE')) {
+                window.localStorage.removeItem('SEARCH_RES');
+            }
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, []);
+
     return (
         <div>
             <div className="form">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={(e) => {
+                    setSearch(query)
+                    e.preventDefault()
+                }}>
                     <input type="text" 
                     className="search-box" 
-                    value={this.state.query} 
-                    onChange={this.handleQuery} 
+                    value={query} 
+                    onChange = {(e) => setQuery(e.target.value)} 
                     placeholder="Enter movie title..."></input>
                     <button type="submit" className="enter-button" >Submit</button>  
                 </form>
@@ -44,11 +57,10 @@ class Form extends Component {
                 Browse as a Guest, Login or Sign Up to Add Movies To Watchlist!    
             </div>
             <div>
-            <Search query={this.state.search}/>
+            <Search query={search}/>
             </div>
         </div>
-    )
-  }
-}
+    );
 
+}
 export default Form
