@@ -3,18 +3,15 @@ const router = express.Router()
 const Movie = require('../models/movie')
 const User = require('../models/userModel')
 
-
-
 //Getting all user movies
 router.get('/:email', async (req, res) => {
-    console.log("Getting");
     try {
         const paramEmail = req.params.email
         const user = await Movie.find({email: paramEmail})
         if(!user) {
             return res.status(404).json({ message: "No movies are Saved" })
         }
-        res.json(user)
+        res.status(200).json(user)
     } catch(err) {
         res.status(400).json({ message: err.message })
     }
@@ -38,7 +35,6 @@ router.post('/:email', async (req, res) => {
             movid: movieid
          } )
         if(user != null) {
-            console.log("Watchlist already")
             return res.status(409).json({message: "In Watchlist already"})
         }
 

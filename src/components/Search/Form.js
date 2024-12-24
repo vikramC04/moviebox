@@ -10,12 +10,15 @@ function Form()  {
 
     useEffect(() => {
         const sessionActive = sessionStorage.getItem('SESSION_ACTIVE');
-        const data = JSON.parse(window.localStorage.getItem('SEARCH_RES'));
         
-        if (data !== null && sessionActive) {
-            setSearch(data);
-            setQuery(data);
+        const setResults = async () => {
+            const data = JSON.parse(window.localStorage.getItem('SEARCH_RES'));
+            if (data !== null && sessionActive) {
+                setSearch(data);
+                setQuery(data);
+            }
         }
+        setResults();
     }, []);
 
     useEffect(() => {

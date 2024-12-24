@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { useAuth } from '../../auth/AuthContext'
 
 const POSTER_IMAGE = `https://image.tmdb.org/t/p/w185`
@@ -7,10 +8,11 @@ function MovieInfo({movie}) {
     const { userLoggedIn } = useAuth()
     const { currentUser } = useAuth()
     const image = `${POSTER_IMAGE}${movie.poster_path}`
+    const [message, setMessage] = useState('');
     
     const createMovie = async () => {
       const userEmail = currentUser.email
-      await fetch(`${process.env.REACT_APP_API_URL}/users/${userEmail}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/users/${userEmail}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -21,10 +23,17 @@ function MovieInfo({movie}) {
               title: movie.title,
               poster: movie.poster_path
           })
-        })
+      })
+      console.log(res.status)
+      if(res.status === 201) {
+        setMessage("Added to Watch list") 
+      } else if(res.status === 409) {
+        setMessage("Already In Watchlist") 
+      } else {
+        setMessage("Error") 
+      }
+      
     }
-
-    
     
     return (
       <div>
@@ -42,6 +51,10 @@ function MovieInfo({movie}) {
             User Reviews: {movie.vote_count}
           </div>
           {userLoggedIn ? <button className="enter-button" onClick={createMovie}>Add To WatchList</button> : ''}
+          <div className="fade-in">
+          {message}
+          </div>
+          
         </div>
         <div>
           <h1>Synopsis:</h1>

@@ -310,5 +310,22 @@ label{
   justify-content: center;
 }
 
+.fade-in {
+  text-align: left;
+  opacity: 0; /* Start completely transparent */
+  animation: fadeIn 3s ease-in forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Start transparent */
+  }
+  to {
+      opacity: 1; /* End fully visible */
+  }
+}
+
+
+
 
 
