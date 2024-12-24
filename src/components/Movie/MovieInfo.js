@@ -26,7 +26,7 @@ function MovieInfo({movie}) {
       })
       console.log(res.status)
       if(res.status === 201) {
-        setMessage("Added to Watch list") 
+        setMessage("Added to Watchlist") 
       } else if(res.status === 409) {
         setMessage("Already In Watchlist") 
       } else {
