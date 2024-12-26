@@ -24,7 +24,7 @@ function MovieInfo({movie}) {
               poster: movie.poster_path
           })
       })
-      console.log(res.status)
+
       if(res.status === 201) {
         setMessage("Added to Watchlist") 
       } else if(res.status === 409) {
